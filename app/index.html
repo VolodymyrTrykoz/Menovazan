@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="">
 
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-
+    <link rel="stylesheet" type="text/css" href="css/tooltipster/dist/css/tooltipster.bundle.min.css" />
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000000">
@@ -36,17 +36,26 @@
     <meta name="msapplication-navbutton-color" content="#000000">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="css/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
 </head>
 
 <body>
 <!-- begin header -->
 <header>
     <div class="container">
-        <div class="logo">Меновазан</div>
-        <nav><a href="#">Главная</a></nav>
-        <nav><a href="#">Состав</a></nav>
-        <nav><a href="#">Применение</a></nav>
-        <nav><a href="#">Условия хранения</a></nav>
+        <div class="logo"><a href="#">Меновазан</a></div>
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#">Состав</a>
+            <a href="#">Применение</a>
+            <a href="#">Условия хранения</a>
+        </nav>
     </div>
 </header>
 <!-- end header -->
@@ -54,15 +63,19 @@
 <!-- begin overview -->
 <section class="overview">
     <div class="container">
-        <h2> Меновазан — первая помощь при <br>
-            бытовых и спортивных травмах
-        </h2>
-        <p class="descroption">Вы активный человек? Ушибы, вывихи и растяжения — часть вашей жизни</p>
-        <img src="img/img-box-1.png" alt="product">
-        <h1>Меновазан — комбинированная мазь <br> от болей в мышцах и суставах.</h1>
-        <p>3 активных компонента мази Меновазан помогут быстро устранить боль и снять воспаление:</p>
-        <p> <span>Ментол</span>  Приятный «холодок» отвлекает от боли, снимает отечность и зуд <sup>1</sup></p>
-        <p> <span>Новокаин + Анастезин</span> Обеспечивают двойной обезболивающий эффект <sup>2</sup></p>
+        <div class="overview-wrapper">
+            <div class="overwiev-content">
+                <h2> Меновазан — первая помощь при <br>
+                    <span class="word-sp">бытовых и спортивных травмах</span>
+                </h2>
+                <p class="description">Вы активный человек? Ушибы, вывихи и растяжения — часть вашей жизни?</p>
+                <div class="overview__img"><img src="img/img-box-1.png" alt="product"></div>
+                <h1><span>Меновазан</span> — комбинированная мазь <br> от болей в мышцах и суставах.</h1>
+                <p>3 активных компонента мази Меновазан помогут быстро устранить боль и снять воспаление:</p>
+                <p class="description--thing"><span class="red-bold">Ментол</span>  Приятный «холодок» отвлекает от боли, снимает отечность и зуд <sup>1</sup></p>
+                <p class="description--thing"><span class="red-bold">Новокаин + Анастезин</span> Обеспечивают двойной обезболивающий эффект <sup>2</sup></p>
+            </div>
+        </div>
     </div>
 </section>
 <!-- end overview -->
@@ -70,27 +83,30 @@
 <!-- begin instruction -->
 <section class="instruction">
     <div class="container">
-            <div class="left-part">
-                <h2>Инструкция</h2>
+        <div class="instruction-wrapper">
+            <h2>Инструкция</h2>
+            <div class="external-box">
+                <div class="left-part">
+                    <p class="heading">Форма выпуска:</p>
+                    <p>Мазь 40 г</p>
+                    <p class="heading">Состав: </p>
+                    <p><span>Действующие вещества:</span><br> 1 г мази содержит ментола рацемического 25 мг, новокаина (прокаина гидрохлорида) 10 мг, анестезина (бензокаина) 10 мг </p>
+                    <p><span>Вспомогательные вещества:</span><br> масло минеральное, парафин белый мягкий, эмульгатор Т-2, вода очищенная
 
-                <p class="heading">Форма выпуска:</p>
-                <p>Мазь 40 г</p>
-                <p class="heading">Состав: </p>
-                <p><span>Действующие вещества:</span> 1 г мази содержит ментола рацемического 25 мг, новокаина (прокаина гидрохлорида) 10 мг, анестезина (бензокаина) 10 мг </p>
-                <p><span>Вспомогательные вещества:</span> масло минеральное, парафин белый мягкий, эмульгатор Т-2, вода очищенная
+                    <p class="heading">Показания:</p>
+                    <ul class="instruction-list">
+                        <li class="list__item">Невралгия</li>
+                        <li class="list__item">Миалгия</li>
+                        <li class="list__item">Артралгия</li>
+                        <li class="list__item">Дерматозы, сопровождающиеся зудом</li>
+                    </ul>
+                </div>
 
-                <p class="heading">Показания:</p>
-                <ul class="instruction-list">
-                    <li class="list__item">Невралгия</li>
-                    <li class="list__item">Миалгия</li>
-                    <li class="list__item">Артралгия</li>
-                    <li class="list__item">Дерматозы, сопровождающиеся зудом</li>
-                </ul>
+                <div class="right-part">
+                    <img src="img/img-box-2.png" alt="product">
+                </div>
             </div>
-
-            <div class="right-part">
-                <img src="img/img-box-2.png" alt="product">
-            </div>
+        </div>
     </div>
 </section>
 <!-- end instruction -->
@@ -98,15 +114,61 @@
 <!-- begin usage -->
 <section class="usage">
     <div class="container">
+        <h2>Применение</h2>
         <div class="usage-wrap">
-            <div class="usage-item usage-item--1">Мазь наносят на болезненные или поврежденные участки кожи 2-3 раза в день и растирают.</div>
+            <div class="usage-item usage-item--1 tooltip" title="This is my image's tooltip message!"><span class="tooltip" title="This is my span's tooltip message!">Some text</span>Мазь наносят на болезненные или поврежденные участки кожи 2-3 раза в день и растирают.</div>
             <div class="usage-item usage-item--2">Максимальная суточная доза для нанесения — 9 г мази.</div>
             <div class="usage-item usage-item--3">Продолжительность лечения зависит от характера сопутствующей терапии, формы и течения заболевания.</div>
         </div>
     </div>
 </section>
 <!-- end usage -->
+
+
+<!-- begin storage -->
+<section class="storage">
+    <div class="container">
+        <h2>Условия хранения</h2>
+        <p>Хранить при температуре не выше 20°С в недоступном для детей месте.</p>
+        <a href="pdf/mentovazan.pdf" class="btn btn--instr" target="_blank">Подробная инструкция <span>pdf</span></a>
+        <a href="https://geoapteka.com.ua/menovazan" class="btn btn--drugstore" target="_blank">Наличие в аптеках</a>
+    </div>
+</section>
+<!-- end storage -->
+
+
+<!-- begin storage -->
+<section class="caution">
+    <div class="container">
+        <div class="test">
+         <p>Самолікування може бути шкідливим для вашого здоров'я</p>
+        </div>
+    </div>
+</section>
+<!-- end storage -->
+
+
+<!-- begin footer -->
+<footer class="caution">
+    <div class="container">
+        <div class="caution__license">
+            <p>РП МОЗ України №UA/5829/02/01</p>
+            <p>Ліцензія: Серія АВ №598036 від 11</p>
+            <p>Реклама лікарського засобу. Перед застосуванням обов'язково прочитати інструкцію та проконсультуватись з лікарем. </p>
+            <p>Зберігати в місцях недоступних для дітей.</p>
+        </div>
+
+        <div class="caution__author">
+            <p>Машковский М. Д. Ментол // Лекарственные средства, ч. 1, с, 311, М., 1977 Местнораздражающие средства</p>
+            <p>Фармакология спорта / Горчакова Н. А., Гудивок Я. С., Гунина Л. М.; под общ. ред. С. А. Олейника, Л. М. Гуниной, Р. Д.</p>
+            <p>Сейфуллы. — К.: Олимп. л-ра, 2010. — 640 с.: ил., табл. — Библиогр: С. 631—639.</p>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+
 <script src="libs/gsap/src/minified/TweenMax.min.js"></script>
 <script src="js/main-js.js"></script>
+
 </body>
 </html>

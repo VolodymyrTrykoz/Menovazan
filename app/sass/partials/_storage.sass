@@ -1,0 +1,35 @@
+.storage
+  text-align: center
+  & h2
+    margin-top: 50px
+
+  .btn
+    display: inline-block
+    font-size: $size-18
+    text-transform: uppercase
+    background: #711a75
+    color: $c-white
+    width: 32.5rem
+    border-radius: 4em
+    margin: 95px 30px 120px 30px
+    padding: 1.23em 0
+    position: relative
+    transition: 0.2s linear
+    & span
+      position: absolute
+      padding: 0.75em 0.45em
+      border-radius: 50%
+      background: #dc0060
+      top: 50%
+      right: 8px
+      transform: translateY(-50%)
+      opacity: 0
+    &:hover
+      & .btn--instr
+         padding-right: 35px
+
+      & span
+        opacity: 1
+    &--drugstore
+       background: $c-red
+

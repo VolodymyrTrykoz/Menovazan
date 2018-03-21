@@ -1,8 +1,21 @@
-var quart = document.querySelector('.quart');
+$(document).ready(function() {
+    $('.tooltip').tooltipster();
 
 
-var tween = TweenLite.to(quart, 2, {
-    x: 100,
-    ease: Power1.easeInOut,
-    delay: 0.2
-    });
+
+
+
+
+
+
+    $('.btn--instr').mouseover(function(){
+        console.log ($('.btn--instr span'))
+        $('.btn--instr span').fadeIn("slow")
+    })
+
+
+
+
+
+
+});
