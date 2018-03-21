@@ -19,6 +19,10 @@
         var id  = $(this).attr('href'),
 
             top = $(id).offset().top;
+            hig = $('#header-js').height();
+            console.log(hig);
+            console.log(top);
+            top = top + hig;
             console.log(top);
         $('body,html').stop(true).animate({scrollTop: top}, 1000);
     });
