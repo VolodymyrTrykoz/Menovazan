@@ -15,21 +15,22 @@
     padding: 1.23em 0
     position: relative
     transition: 0.2s linear
+    overflow: hidden
     & span
       position: absolute
       padding: 0.75em 0.45em
       border-radius: 50%
       background: #dc0060
       top: 50%
-      right: 8px
       transform: translateY(-50%)
-      opacity: 0
-    &:hover
-      & .btn--instr
-         padding-right: 35px
+      display: none
 
-      & span
-        opacity: 1
+
+
+
     &--drugstore
        background: $c-red
 
+.btn--instr
+  &:hover
+    padding-right: 35px
