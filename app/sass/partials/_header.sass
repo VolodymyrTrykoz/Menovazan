@@ -1,6 +1,13 @@
 header
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  overflow: hidden
+
   background-color: $c-purple
   color: $c-white
+  opacity: 0
   & .container
     display: flex
     justify-content: space-between
@@ -9,19 +16,21 @@ header
     & .logo
       margin-left: 1em
       & a
+        color: $c-white
         font-size: $size-35
         font-weight: 500
+
 
     & nav
       width: 65%
       margin-left: 50px
       display: flex
       justify-content: space-around
-    & a
-      color: $c-white
-      font-size: $size-24
-      font-weight: 300
-
+      & a
+        color: $c-white
+        font-size: $size-24
+        font-weight: 300
+        position: relative
 
 
 
@@ -30,3 +39,6 @@ header
   top: 0
   width: 100%
   z-index: 9999
+
+
+

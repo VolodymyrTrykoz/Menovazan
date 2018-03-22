@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 // Скрипты проекта
 gulp.task('scripts', function() {
 	return gulp.src([
-		'app/js/common.js' // Всегда в конце
+		'app/js/main.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())
@@ -44,15 +44,15 @@ gulp.task('sass', function() {
 	}).on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(sourcemaps.write('.'))
 	.pipe(cleanCSS())
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', ['sass', 'scripts', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
+	gulp.watch(['libs/**/*.js', 'app/js/main.js'], ['scripts']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 

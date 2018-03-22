@@ -1,5 +1,7 @@
+.overview
+  padding-top: 17em
 .overview-wrapper
-  margin: 4em 0
+  margin: 0
   background-image: url(../img/img-block-1.png)
   background-size: cover
   background-repeat: no-repeat
@@ -8,13 +10,15 @@
 .overwiev-content
   width: 62%
   margin-left: 35%
-  padding: 3em
+  padding: 4em 3em
   h1
     padding-left: 1.5em
     font-weight: 400
+    opacity: 0
     span
       font-weight: 700
   h2
+    text-align: left
     .word-sp
       word-spacing: 0.25em
   img
@@ -22,13 +26,29 @@
     height: auto
   .description--thing
     font-weight: 300
+    position: relative
+    transform: translateY(50px)
+    opacity: 0
+
+
   .red-bold
     font-weight: 500
     color: $c-red
 
 .overview__img
   text-align: center
-
+  img
+    opacity: 0
 
 .overview-js
   margin-top: 143px
+
+.description
+  position: relative
+  transform: translateY(250%)
+  opacity: 0
+  &-components
+    position: relative
+    margin-top: 2em
+    transform: translateY(100%)
+    opacity: 0

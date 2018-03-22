@@ -38,9 +38,6 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="css/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
-
 </head>
 
 <body>
@@ -50,7 +47,7 @@
         <div class="logo"><a href="#overview-js">Меновазан</a></div>
         <nav>
             <a href="#overview-js">Главная</a>
-            <a href="#">Состав</a>
+            <a href="#instruction-js">Инструкция</a>
             <a href="#usage-js">Применение</a>
             <a href="#storage-js">Условия хранения</a>
         </nav>
@@ -59,9 +56,9 @@
 <!-- end header -->
 
 <!-- begin overview -->
-<section id="overview-js" class="overview">
+<section class="overview">
     <div class="container">
-        <div class="overview-wrapper">
+        <div id="overview-js" class="overview-wrapper">
             <div class="overwiev-content">
                 <h2> Меновазан — первая помощь при <br>
                     <span class="word-sp">бытовых и спортивных травмах</span>
@@ -69,16 +66,20 @@
                 <p class="description">Вы активный человек? Ушибы, вывихи и растяжения — часть вашей жизни?</p>
                 <div class="overview__img"><img src="img/img-box-1.png" alt="product"></div>
                 <h1><span>Меновазан</span> — комбинированная мазь <br> от болей в мышцах и суставах.</h1>
-                <p>3 активных компонента мази Меновазан помогут быстро устранить боль и снять воспаление:</p>
+                <p class="description-components">3 активных компонента мази Меновазан помогут быстро устранить боль и снять воспаление:</p>
+
                 <p class="description--thing">
+                    <span class="red-bold">Ментол</span>  Приятный «холодок» отвлекает от боли, снимает отечность и зуд
                     <span class="tooltip" title="Машковский М. Д. Ментол // Лекарственные средства, ч. 1, с, 311, М., 1977 Местнораздражающие средства">
-                        <span class="red-bold">Ментол</span>  Приятный «холодок» отвлекает от боли, снимает отечность и зуд <sup>1</sup>
+                        <sup>1</sup>
                     </span>
                 </p>
+
                 <p class="description--thing">
+                    <span class="red-bold">Новокаин + Анастезин</span> Обеспечивают двойной обезболивающий эффект
                     <span class="tooltip" title="Фармакология спорта / Горчакова Н. А., Гудивок Я. С., Гунина Л. М.; под общ. ред. С. А. Олейника, Л. М. Гуниной, Р. Д.
-                                                 Сейфуллы. — К.: Олимп. л-ра, 2010. — 640 с.: ил., табл. — Библиогр: С. 631—639.">
-                        <span class="red-bold">Новокаин + Анастезин</span> Обеспечивают двойной обезболивающий эффект <sup>2</sup>
+                          Сейфуллы. — К.: Олимп. л-ра, 2010. — 640 с.: ил., табл. — Библиогр: С. 631—639.">
+                          <sup>2</sup>
                     </span>
                 </p>
 
@@ -91,23 +92,28 @@
 <!-- begin instruction -->
 <section class="instruction">
     <div class="container">
-        <div class="instruction-wrapper">
+        <div id="instruction-js" class="instruction-wrapper">
             <h2>Инструкция</h2>
             <div class="external-box">
                 <div class="left-part">
-                    <p class="heading">Форма выпуска:</p>
-                    <p>Мазь 40 г</p>
-                    <p class="heading">Состав: </p>
-                    <p><span>Действующие вещества:</span><br> 1 г мази содержит ментола рацемического 25 мг, новокаина (прокаина гидрохлорида) 10 мг, анестезина (бензокаина) 10 мг </p>
-                    <p><span>Вспомогательные вещества:</span><br> масло минеральное, парафин белый мягкий, эмульгатор Т-2, вода очищенная
-
-                    <p class="heading">Показания:</p>
-                    <ul class="instruction-list">
-                        <li class="list__item">Невралгия</li>
-                        <li class="list__item">Миалгия</li>
-                        <li class="list__item">Артралгия</li>
-                        <li class="list__item">Дерматозы, сопровождающиеся зудом</li>
-                    </ul>
+                    <div class="instruction__form">
+                        <p class="heading">Форма выпуска:</p>
+                        <p>Мазь 40 г</p>
+                    </div>
+                    <div class="instruction__composition">
+                        <p class="heading">Состав: </p>
+                        <p><span>Действующие вещества:</span><br> 1 г мази содержит ментола рацемического 25 мг, новокаина (прокаина гидрохлорида) 10 мг, анестезина (бензокаина) 10 мг </p>
+                        <p><span>Вспомогательные вещества:</span><br> масло минеральное, парафин белый мягкий, эмульгатор Т-2, вода очищенная</p>
+                    </div>
+                    <div class="instruction__indication">
+                        <p class="heading">Показания:</p>
+                        <ul class="instruction-list">
+                            <li class="list__item">Невралгия</li>
+                            <li class="list__item">Миалгия</li>
+                            <li class="list__item">Артралгия</li>
+                            <li class="list__item">Дерматозы, сопровождающиеся зудом</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="right-part">
@@ -120,10 +126,10 @@
 <!-- end instruction -->
 
 <!-- begin usage -->
-<section id="usage-js" class="usage">
-    <div class="container">
+<section class="usage">
+    <div id="usage-js" class="container">
         <h2>Применение</h2>
-        <div class="usage-wrap">
+        <div  class="usage-wrap">
             <div class="usage-item usage-item--1">Мазь наносят на болезненные или поврежденные участки кожи 2-3 раза в день и растирают.</div>
             <div class="usage-item usage-item--2">Максимальная суточная доза для нанесения — 9 г мази.</div>
             <div class="usage-item usage-item--3">Продолжительность лечения зависит от характера сопутствующей терапии, формы и течения заболевания.</div>
@@ -134,26 +140,20 @@
 
 
 <!-- begin storage -->
-<section id="storage-js" class="storage">
-    <div class="container">
+<section class="storage">
+    <div id="storage-js" class="container">
         <h2>Условия хранения</h2>
         <p>Хранить при температуре не выше 20°С в недоступном для детей месте.</p>
-        <a href="pdf/mentovazan.pdf" class="btn btn--instr" target="_blank">Подробная инструкция <span>pdf</span></a>
-        <a href="https://geoapteka.com.ua/menovazan" class="btn btn--drugstore" target="_blank">Наличие в аптеках</a>
-    </div>
-</section>
-<!-- end storage -->
-
-
-<!-- begin caution -->
-<section class="caution">
-    <div class="container">
-        <div class="test">
-         <p>Самолікування може бути шкідливим для вашого здоров'я</p>
+        <div class="btn-box">
+            <a href="pdf/mentovazan.pdf" class="btn btn--instr" target="_blank">Подробная инструкция <span>pdf</span></a>
+            <a href="https://geoapteka.com.ua/menovazan" class="btn btn--drugstore" target="_blank">Наличие в аптеках</a>
+        </div>
+        <div class="caut">
+            <p>Самолікування може бути шкідливим для вашого здоров'я</p>
         </div>
     </div>
 </section>
-<!-- end caution -->
+<!-- end storage -->
 
 
 <!-- begin footer -->
@@ -175,9 +175,22 @@
 </footer>
 <!-- end footer -->
 
-<script src="libs/gsap/src/minified/TweenMax.min.js"></script>
-<script src="libs/sticky-header.js"></script>
-<script src="js/main-js.js"></script>
 
+
+<script src="libs/gsap/src/minified/TweenMax.min.js"></script>
+<script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+<script src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="css/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
+
+
+
+<!-- custom scroll for smooth position changing -->
+<script src="js/scroll-jquery.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/test.js"></script>
 </body>
 </html>
