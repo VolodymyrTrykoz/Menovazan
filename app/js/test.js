@@ -3,15 +3,15 @@
 ///////////////////////////////////////////////////////////
 var controller = new ScrollMagic.Controller();
 var timeline = new TimelineLite();
-    TweenMax.fromTo(["header",".logo", ".overview-wrapper"], 1, {css: {autoAlpha: 0}}, {css: {autoAlpha: 1}});
+    timeline.fromTo(["header",".logo", ".overview-wrapper"], 1, {css: {autoAlpha: 0}}, {css: {autoAlpha: 1}});
 
 //triggering animation when triggerElement is visible in window
 var scene = new ScrollMagic.Scene({
     triggerElement: '#header-js',
     reverse: false
 })
-    .setTween(timeline)
-    .addTo(controller);
+.setTween(timeline)
+.addTo(controller);
 
 
 var tlNavagation = new TimelineLite();
@@ -51,16 +51,17 @@ tlComponents.to([".description--thing", ".description-components"], 0.5, {
 ///Animation for section instruction starts here///
 ///////////////////////////////////////////////////
 
-var controller2 = new ScrollMagic.Controller();
-var tlInstruction = new TimelineLite();
+
+// var tlInstruction = new TimelineLite();
 //triggering animation when triggerElement is visible in window
-var sceneInstruction = new ScrollMagic.Scene({
-    triggerElement: '#instruction-js',
+var scene2 = new ScrollMagic.Scene({
+    triggerElement: '.instruction',
     reverse: false
 })
-.addTo(controller2);
-
-tlInstruction.to($('.instruction-wrapper'), 1, {
+.setClassToggle('.instruction', 'run')
+    .addTo(controller);
+var tlInstruction = new TimelineLite();
+tlInstruction.to($('.instruction-wrapper'), 5, {
     autoAlpha: 1
 });
 
@@ -85,7 +86,12 @@ instructionForm.to($('.instruction__form'), 0.5, {
 ///////////////////////////////////////////////////
 //////Animation for section usage starts here//////
 ///////////////////////////////////////////////////
-
+var scene3 = new ScrollMagic.Scene({
+    triggerElement: '.usage',
+    reverse: false
+})
+.setClassToggle('.usage', 'run')
+.addTo(controller);
 var usage = new TimelineLite();
     usage.to($('.usage h2'), 1, {
         autoAlpha: 1,
@@ -107,23 +113,42 @@ var usage = new TimelineLite();
 ///////////////////////////////////////////////////
 //////Animation for section storage starts here////
 ///////////////////////////////////////////////////
+var scene4 = new ScrollMagic.Scene({
+    triggerElement: '.storage'
+});
+var tlStorage = new TimelineMax();
 
-var storage = new TimelineLite();
-    storage.to($('.storage h2'), 1, {
+tlStorage.to($('.storage h2'), 1, {
+    autoAlpha: 1
+})
+.to($('.storage p'),  0.5, {
+        autoAlpha: 1,
+        y: 0
+    })
+.to($('.btn--instr'),  0.3, {
+        autoAlpha: 1,
+        y: 0
+    })
+.to($('.btn--drugstore'),  0.3, {
+        autoAlpha: 1,
+        y: 0
+    })
+.to($('.caution'),  0.3, {
         autoAlpha: 1
-    })
-    .to($('.storage p'),  0.5, {
-        autoAlpha: 1,
-        y: 0
-    })
-    .to($('.btn--instr'),  0.3, {
-        autoAlpha: 1,
-        y: 0
-    })
-    .to($('.btn--drugstore'),  0.3, {
-        autoAlpha: 1,
-        y: 0
-    })
-    .to($('.caut'),  0.3, {
-        autoAlpha: 1,
     });
+// scene4.addTween(tlStorage);
+
+
+
+
+
+///////////////////////////////////////////////////
+//////////Animation for footer starts here/////////
+///////////////////////////////////////////////////
+var scene5 = new ScrollMagic.Scene({
+    triggerElement: '#footer',
+    offset: -250,
+    reverse: false
+});
+var tween = TweenMax.to('footer p', 2, { autoAlpha: 1});
+scene5.setTween(tween).addTo(controller);
