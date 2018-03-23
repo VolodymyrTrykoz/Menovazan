@@ -26,28 +26,27 @@ $(document).ready(function() {
     });
     var ltHeader = new TimelineLite();
     ltHeader.fromTo(["header",".logo"], 1, {css: {autoAlpha: 0}}, {css: {autoAlpha: 1}})
-        .staggerFrom("header nav a", 0.5, {
-            autoAlpha: 0,
-            yPercent: '+350'
-        }, 0.2)
-        .to('.overview-wrapper', 0.9, {
+         .to('.overview-wrapper', 0.5, {
             autoAlpha: 1
         })
-        .to('.description', 0.7, {
+        .to('.description', 0.3, {
             autoAlpha: 1,
             y: 0
         })
-        .to('.overview__img img', 0.7, {
+        .to('.overview__img img', 0.5, {
+            autoAlpha: 1,
+            delay: 0.3
+        })
+        .to('h1', 0.3, {
             autoAlpha: 1
         })
-        .to('h1', 0.7, {
-            autoAlpha: 1,
-            y: 0
+        .to(".description-components", 0.5, {
+            autoAlpha: 1
         })
-        .to([".description--thing", ".description-components"], 0.7, {
-            autoAlpha: 1,
-            y: 0
+        .to(".description--thing", 0.5, {
+            autoAlpha: 1
         });
+
     scene.setTween(ltHeader).addTo(controller);
 
 
@@ -64,19 +63,19 @@ $(document).ready(function() {
     tlInstruction.to('.instruction-wrapper', 1, {
         autoAlpha: 1
     })
-    .to('.instruction__form', 0.5, {
+    .to('.instruction__form', 0.4, {
             autoAlpha: 1,
             y: 0
     })
-    .to('.instruction__composition',  0.5, {
+    .to('.instruction__composition',  0.4, {
             autoAlpha: 1,
             y: 0
     })
-    .to('.instruction__indication',  0.3, {
+    .to('.instruction__indication',  0.4, {
             autoAlpha: 1,
             y: 0
-    })
-    .to('.instruction img',  2, {
+                })
+    .to('.instruction img',  1, {
             autoAlpha: 1
     });
     scene2.setTween(tlInstruction).addTo(controller);
@@ -90,7 +89,7 @@ $(document).ready(function() {
     });
 
     var usage = new TimelineLite();
-    usage.to('.usage h2', 1, {
+    usage.to('.usage h2', 0.3, {
         autoAlpha: 1,
         y: 0
     })
@@ -112,7 +111,8 @@ $(document).ready(function() {
     ///////////////////////////////////////////////////
     var scene4 = new ScrollMagic.Scene({
         triggerElement: '.storage',
-        reverse: false
+        reverse: false,
+        offset: -200
     });
     var tlStorage = new TimelineMax();
 
@@ -123,30 +123,19 @@ $(document).ready(function() {
             autoAlpha: 1,
             y: 0
     })
-    .to('.btn--instr',  0.5, {
+    .to('.btn--instr',  0.3, {
             y: "0%",
             autoAlpha: 1
     })
-    .to('.btn--drugstore',  0.5, {
+    .to('.btn--drugstore',  0.3, {
             y: "0%",
             autoAlpha: 1
     })
-    .to('.caution',  1, {
-            autoAlpha: 1,
-            delay: 0.3
-    });
+    .add(TweenMax.to('.caution',  0.5, {
+            autoAlpha: 1
+    }), '.btn--drugstore')
+    .add(TweenMax.to('footer p', 0.5, { autoAlpha: 1}), '.btn--drugstore');
     scene4.setTween(tlStorage).addTo(controller);
-
-    ///////////////////////////////////////////////////
-    //////////Animation for footer starts here/////////
-    ///////////////////////////////////////////////////
-    var scene5 = new ScrollMagic.Scene({
-        triggerElement: '#footer',
-        offset: -250,
-        reverse: false
-    });
-    var tween = TweenMax.to('footer p', 2, { autoAlpha: 1});
-    scene5.setTween(tween).addTo(controller);
 
 
     ////////////////////////////////////////
