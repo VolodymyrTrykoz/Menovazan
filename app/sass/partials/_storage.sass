@@ -4,7 +4,7 @@
   p
    opacity: 0
    position: relative
-   transform: translateY(100%)
+   transform: translateY(300%)
   h2
    opacity: 0
   .btn
@@ -17,7 +17,6 @@
     border-radius: 4em
     padding: 1.23em 0
     position: relative
-    transition: 0.2s linear
     overflow: hidden
     margin: 0 30px
     & span
@@ -40,15 +39,17 @@
        background: $c-red
        opacity: 0
        position: relative
-       transform: translateY(300%)
+       transform: translateY(50%)
 
 
 .btn--instr
-  opacity: 0
   position: relative
-  transform: translateY(300%)
+  opacity: 0
+  transform: translateY(50%)
+  transition: padding 0.2s linear
   &:hover
     padding-right: 35px
+
     & span
      transition: 0.2s linear
      transform: translate(-15%, -50%)
@@ -56,11 +57,10 @@
      visibility: visible
 
 .btn-box
-  overflow: hidden
   margin: 95px 0 120px 0
 
 .caution
-  box-shadow:  0 0 0.1px #000000;
+  box-shadow:  0 0 0.1px #000000
   height: 18.5rem
   position: relative
   opacity: 0
