@@ -99,11 +99,13 @@ $(document).ready(function() {
     })
     .to('.usage-item--2',  0.5, {
             autoAlpha: 1,
-            y: 0
+            y: 0,
+            delay: -0.2
     })
     .to('.usage-item--3',  0.5, {
             autoAlpha: 1,
-            y: 0
+            y: 0,
+            delay: -0.2
     });
     scene3.setTween(usage).addTo(controller);
     ///////////////////////////////////////////////////
