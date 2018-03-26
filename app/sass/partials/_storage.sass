@@ -40,21 +40,24 @@
        opacity: 0
        position: relative
        transform: translateY(50%)
+       transition: background 0.2s linear
+       &:hover
+          background: #ba1f22
 
 
-.btn--instr
-  position: relative
-  opacity: 0
-  transform: translateY(50%)
-  transition: padding 0.2s linear
-  &:hover
-    padding-right: 35px
+    &--instr
+      position: relative
+      opacity: 0
+      transform: translateY(50%)
+      transition: padding 0.2s linear
+      &:hover
+        padding-right: 35px
 
-    & span
-     transition: 0.2s linear
-     transform: translate(-15%, -50%)
-     opacity: 1
-     visibility: visible
+        & span
+         transition: 0.2s linear
+         transform: translate(-15%, -50%)
+         opacity: 1
+         visibility: visible
 
 .btn-box
   margin: 95px 0 120px 0
@@ -64,16 +67,19 @@
   height: 18.5rem
   position: relative
   opacity: 0
+  will-change: transform
   p
+    position: absolute
+    top: 60px
     left: 0
     right: 0
-    font-size: 40px
+    font-size: 4rem
     font-weight: 100
     text-transform: uppercase
     letter-spacing: -2px
     transform: scaleY(5)
     text-align: center
     color: #959595
-    position: absolute
-    left: 0
-    top: 0.5em
+    margin: 0
+
+

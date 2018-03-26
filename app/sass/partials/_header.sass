@@ -4,7 +4,6 @@ header
   width: 100%
   top: 0
   overflow: hidden
-
   background-color: $c-purple
   color: $c-white
   opacity: 0
@@ -19,6 +18,10 @@ header
         color: $c-white
         font-size: $size-35
         font-weight: 500
+        transition: opacity 0.2s linear
+        &:hover
+          opacity: 0.7
+
 
     & nav
       width: 65%
@@ -34,10 +37,19 @@ header
           opacity: 0.7
           transition: 0.2s linear
 
+
+
 .fixed
   position: fixed
   top: 0
   width: 100%
-  z-index: 9999
+  z-index: 100
+
+.menu-slim
+  display: none
 
 
+
+.mobile-menu
+  .nav-mobile
+    display: none

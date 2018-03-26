@@ -5,21 +5,6 @@
 @import "base/vars"
 
 
-//partials
-@import "partials/header"
-@import "partials/overview"
-@import "partials/instruction"
-@import "partials/usage"
-@import "partials/storage"
-@import "partials/footer"
-
-//media
-@import "media/header-media"
-
-
-
-
-
 
 *
     box-sizing: border-box
@@ -38,7 +23,7 @@ h1
     background: $c-purple
 
 h2
-    font-size: 36px
+    font-size: $size-35
     font-weight: 500
     color: $c-purple
     text-align: center
@@ -55,7 +40,22 @@ p
 
 
 
+//partials
+@import "partials/header"
+@import "partials/overview"
+@import "partials/instruction"
+@import "partials/usage"
+@import "partials/storage"
+@import "partials/footer"
 
+//media
+@import "media/header-media"
+@import "media/mobile-menu"
+@import "media/instruction-media"
+@import "media/overview-media"
+@import "media/usage-media"
+@import "media/storage-media"
+@import "media/footer-media"
 
 
 
