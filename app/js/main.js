@@ -7,10 +7,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
-
     ////////////////////////////////////////
     ////////////////////////////////////////
     //////////////ANIMATION/////////////////
@@ -150,7 +146,19 @@ $(document).ready(function() {
     ////////////////////////////////////////
 
     //burger menu trigger with menu animation
-    $('.menu-slim').click(function(){
+    $('.menu-slim').click(animateMenu);
+    $('.nav-mobile a').click(function(){
+        var tlMenuu = new TimelineMax();
+        tlMenuu
+            .staggerTo('.nav-mobile a', 0.5, {x:'-500%'}, 0.1)
+            .to('.nav-mobile', 0.3, {
+                bottom: '100%'
+            }, "-=0.3");
+        console.log('closed');
+        $('.menu-slim').removeClass("menu-js-toggle");
+    });
+
+    function animateMenu(){
         $(this).toggleClass("menu-js-toggle");
         console.log($(this));
         var tlMenu = new TimelineMax();
@@ -164,13 +172,11 @@ $(document).ready(function() {
         }
         else {
             tlMenu
-                .staggerTo('.nav-mobile a', 0.5, {x:'-400%'}, 0.1)
+                .staggerTo('.nav-mobile a', 0.5, {x:'-500%'}, 0.1)
                 .to('.nav-mobile', 0.3, {
                     bottom: '100%'
-            }, "-=0.3");
+                }, "-=0.3");
             console.log('closed');
         }
-    });
-
-
+    }
 });
