@@ -8,6 +8,9 @@ $(document).ready(function() {
 
 
 
+
+
+
     ////////////////////////////////////////
     ////////////////////////////////////////
     //////////////ANIMATION/////////////////
@@ -146,6 +149,28 @@ $(document).ready(function() {
     ////////////////////////////////////////
     ////////////////////////////////////////
 
+    //burger menu trigger with menu animation
+    $('.menu-slim').click(function(){
+        $(this).toggleClass("menu-js-toggle");
+        console.log($(this));
+        var tlMenu = new TimelineMax();
+        if ($(this).hasClass("menu-js-toggle")) {
+            tlMenu
+                .to('.nav-mobile', 0.3, {
+                    bottom: '0%'
+                })
+                .staggerTo('.nav-mobile a', 0.5, {x:'0%'}, 0.1);
+            console.log('opened');
+        }
+        else {
+            tlMenu
+                .staggerTo('.nav-mobile a', 0.5, {x:'-400%'}, 0.1)
+                .to('.nav-mobile', 0.3, {
+                    bottom: '100%'
+            }, "-=0.3");
+            console.log('closed');
+        }
+    });
 
 
 });
